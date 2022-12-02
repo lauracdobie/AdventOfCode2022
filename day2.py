@@ -88,7 +88,7 @@ test_list_of_lists = [test_data[i * n:(i + 1) * n] for i in range((len(test_data
 
 new_final_score = 0
 
-for list in test_list_of_lists:
+for list in list_of_lists:
     result = calculate_new_score(list[0], list[1])
     new_final_score += result
    
