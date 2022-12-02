@@ -1,7 +1,16 @@
-data = ["A", "Y", "B", "X", "C", "Z"]
+data = []
+fileobj=open("day2_input.txt")
+data=fileobj.read().split('\n')
+
 n = 2
- 
-list_of_lists = [data[i * n:(i + 1) * n] for i in range((len(data) + n - 1) // n )]
+list_of_lists = []
+
+for item in data:
+    list = []
+    list.append(item[0])
+    list.append(item[2])
+    list_of_lists.append(list)
+
 print(list_of_lists)
  
 def calculate_score(p1, p2):
