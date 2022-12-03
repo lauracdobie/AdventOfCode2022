@@ -77,4 +77,35 @@ for item in data:
 
 print(total)
 
+new_total = 0
+
+list_of_lists = []
+
+for i in range(0, len(data), 3):
+    list_of_lists.append(data[i:i+3])
+
+for item in list_of_lists:
+    common_letter_list = list(set(item[0])&set(item[1])&set(item[2]))
+    number_to_add = priorities[common_letter_list[0]]
+
+    new_total += number_to_add
+
+print(new_total)
+
+test_data = ["vJrwpWtwJgWrhcsFMMfFFhFp",
+"jqHRNqRjqzjGDLGLrsFMfFZSrLrFZsSL",
+"PmmdzqPrVvPwwTWBwg"]
+
+test_letter_list = list(set(test_data[0])&set(test_data[1])&set(test_data[2]))
+
+print(priorities[test_letter_list[0]])
+
+test_data_2 = ["wMqvLMZHhHMvwLHjbvcjnnSBnvTQFn",
+"ttgJtRGJQctTZtZT",
+"CrZsJsPPZsGzwwsLwLmpwMDw"]
+
+test_letter_list_2 = list(set(test_data_2[0])&set(test_data_2[1])&set(test_data_2[2]))
+
+print(priorities[test_letter_list_2[0]])
+
 
