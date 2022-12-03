@@ -5,6 +5,10 @@ test_data = ["vJrwpWtwJgWrhcsFMMfFFhFp",
 "ttgJtRGJQctTZtZT",
 "CrZsJsPPZsGzwwsLwLmpwMDw"]
 
+data = []
+fileobj=open("day3_input.txt")
+data=fileobj.read().split('\n')
+
 priorities = {
     "a": 1,
     "b": 2,
@@ -62,7 +66,7 @@ priorities = {
 
 total = 0
 
-for item in test_data:
+for item in data:
     midpoint = int(len(item)/2)
     s1 = item[0:midpoint]
     s2 = item[midpoint: int(len(item))]
