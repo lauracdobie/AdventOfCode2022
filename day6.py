@@ -16,7 +16,7 @@ for char in data:
   list.append(char)
  
 start_index = 0
-end_index = 4
+end_index = 14
 
 block_to_check = list[start_index:end_index]
 
@@ -26,7 +26,7 @@ while found == False:
     for letter in block_to_check:
         if letter not in marker_list:
             marker_list.append(letter)
-        if len(marker_list) == 4 :
+        if len(marker_list) == 14 :
             print("Result is: " + str(end_index))
             found = True
     marker_list = []
