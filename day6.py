@@ -1,3 +1,7 @@
+data = ""
+fileobj=open("day6_input.txt")
+data=fileobj.read()
+
 marker_list = []
  
 string = "mjqjpqmgbljsphdztnvjfqwrcgsmlb" #Result should be 7
@@ -8,9 +12,7 @@ string4 = "zcfzfwzzqfrljwzlrfnpqdbhtmscgvjw" #Result should be 11
  
 list = []
  
-new_list = []
- 
-for char in string:
+for char in data:
   list.append(char)
  
 start_index = 0
@@ -18,12 +20,9 @@ end_index = 4
 
 block_to_check = list[start_index:end_index]
 
-print("Block to check: " + str(block_to_check))
-
 found = False
 
 while found == False:
-    print("New block to check: " + str(block_to_check))
     for letter in block_to_check:
         if letter not in marker_list:
             marker_list.append(letter)
