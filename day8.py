@@ -2,20 +2,15 @@ data = []
 fileobj=open("day8_input.txt")
 data=fileobj.read().split('\n')
  
-data_tree_rows = []
+tree_rows = []
  
 for item in data:
   row_list = []
   for char in item:
     row_list.append(int(char))
-  data_tree_rows.append(row_list) 
- 
-tree_rows = [
-[3, 0, 3, 7, 3],
-[2, 5, 5, 1, 2],
-[6, 5, 3, 3, 2],
-[3, 3, 5, 4, 9],
-[3, 5, 3, 9, 0]]
+  tree_rows.append(row_list) 
+
+print(len(tree_rows)) 
  
 column_index = 0
  
