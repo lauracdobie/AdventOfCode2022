@@ -13,7 +13,8 @@ for item in data:
 # print(data_tree_rows)
 print(len(data_tree_rows))
  
-tree_rows = [[3, 0, 3, 7, 3],
+tree_rows = [
+[3, 0, 3, 7, 3],
 [2, 5, 5, 1, 2],
 [6, 5, 3, 3, 2],
 [3, 3, 5, 4, 9],
@@ -50,6 +51,9 @@ while current_index < len(tree_rows[0]) - 1:
     tree_to_check = row[current_index]
     print("Tree to check: " + str(tree_to_check))
     print("Current index: " + str(current_index))
+
+    column = tree_columns[current_index]
+    print("Current column: " + str(column))
    
     #Check left
     print("Left side: " + str(row[0:current_index]) )
@@ -72,7 +76,6 @@ while current_index < len(tree_rows[0]) - 1:
       continue
    
     #Check above
-    column = tree_columns[current_row_number]
     top_split = sorted(column[0:current_row_number])
     print("Top side: " + str(column[0:current_row_number]))
     end_top_index = top_split[len(top_split) - 1]
